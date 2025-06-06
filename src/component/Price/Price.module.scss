@@ -1,0 +1,13 @@
+.price__item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  &:nth-child(even) {
+    background-color: #eeeeee;
+  }
+}
+
+@media (max-width: 400px) {
+  .price__item {
+    font-size: 14px;
+  }
+}

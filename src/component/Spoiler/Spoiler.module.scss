@@ -1,0 +1,36 @@
+.open__btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
+  border-radius: 50%;
+  border: 1px solid transparent;
+
+  &::after,
+  &::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &:hover {
+    background-color: #807170;
+    &::after,
+    &::before {
+      background-color: white;
+    }
+  }
+}
+
+.active {
+  transform: rotate(45deg);
+}
