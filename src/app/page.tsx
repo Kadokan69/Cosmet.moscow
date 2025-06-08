@@ -1,4 +1,5 @@
 import Banner from "@/component/Banner/Banner";
+import Form from "@/component/Form/Form";
 import Price from "@/component/Price/Price";
 import Spoiler from "@/component/Spoiler/Spoiler";
 import Image from "next/image";
@@ -157,6 +158,17 @@ const Home = () => {
         <h2 className="text-center">Цены на увеличение губ</h2>
         <div className="max-w-[1200px] m-auto p-4">
           <Price />
+        </div>
+      </section>
+      <section>
+        <div className="max-w-[1200px] m-auto p-4 flex flex-col md:flex-row gap-4 ">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h3>Записаться на консультацию</h3>
+            <p>Скидка 50% на консультацию при проведении процедуры в день визита.</p>
+          </div>
+          <div className="w-full md:w-1/2 p-3 md:p-0 ">
+            <Form />
+          </div>
         </div>
       </section>
     </>

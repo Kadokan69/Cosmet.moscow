@@ -1,0 +1,50 @@
+.form {
+  input {
+    border-radius: 8px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.customRadio {
+  position: relative;
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    + label {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 18px;
+        height: 18px;
+        border: 2px solid #807170;
+        border-radius: 2px;
+        background: white;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        // left: 5px;
+        // top: 5px;
+        width: 8px;
+        height: 8px;
+        background: #807170;
+        opacity: 0;
+        transition: opacity 0.2s;
+        top: 50%;
+        left: 5px;
+        transform: translate(0, -50%);
+      }
+    }
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
