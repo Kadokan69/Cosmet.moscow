@@ -3,6 +3,8 @@ import Form from "@/component/Form/Form";
 import Price from "@/component/Price/Price";
 import Spoiler from "@/component/Spoiler/Spoiler";
 import Image from "next/image";
+import Portfolio from "@/component/Portfolio/Portfolio";
+import { portfolio } from "@/constant/constant";
 
 const Home = () => {
   return (
@@ -38,8 +40,8 @@ const Home = () => {
           </article>
         </div>
       </section>
-      <section>
-        <div className="max-w-[1200px] m-auto p-4">
+      <section className="pt-10 pb-10">
+        <div className="max-w-[1200px] m-auto">
           <h2 className="text-center">Увеличение и коррекция губ гиалуроновой кислотой</h2>
           <p className="text-center">
             Многие из девушек хоть раз задумывалась об увеличении губ. Увлажненные и пышные губы способны преобразить
@@ -48,7 +50,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section>
+      <section className="pt-10 pb-10">
         <h2 className="text-center">Особенности процедуры</h2>
         <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-3 max-w-[1200px] m-auto p-4">
           <div className="flex flex-col justify-start gap-6 items-start w-full text-[18px]">
@@ -95,7 +97,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="pt-10 pb-10">
         <h2 className="text-center">Показания и противопоказания к процедуре</h2>
         <div className="flex max-w-[1200px] gap-4 m-auto p-4 flex-col md:flex-row">
           <Spoiler title={"Показания"} className="md:flex-1/2 " open={true}>
@@ -124,7 +126,7 @@ const Home = () => {
           </Spoiler>
         </div>
       </section>
-      <section>
+      <section className="pt-10 pb-10">
         <h2 className="text-center">Особенности процедуры</h2>
         <div className="grid grid-cols-1  grid-rows-[400px_1fr] md:grid-rows-1 md:grid-cols-2 gap-3 max-w-[1200px] m-auto p-4">
           <div className="relative">
@@ -154,13 +156,18 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="pt-10 pb-10">
         <h2 className="text-center">Цены на увеличение губ</h2>
         <div className="max-w-[1200px] m-auto p-4">
           <Price />
         </div>
       </section>
-      <section>
+      <section className="pt-10 pb-10">
+        <h2 className="text-center">Увеличение губ: фото До и После</h2>
+        <p className="text-center">На фото представлены результаты до и после контурной пластики губ.</p>
+        <Portfolio data={portfolio} />
+      </section>
+      <section className="pt-10 pb-10">
         <div className="max-w-[1200px] m-auto p-4 flex flex-col md:flex-row gap-4 ">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h3>Записаться на консультацию</h3>

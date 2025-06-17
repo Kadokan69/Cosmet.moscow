@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const NavLink = [
     {
         id: 1,
@@ -79,5 +81,38 @@ export const price = [
     {
       "name": "Stylage S Bi-soft Lidocaine, 0,8 мл",
       "price": 15900
+    }
+  ]
+
+  export const portfolio = [
+    {
+      "id": 1,
+      "imageBefore": "/before1.png",
+      "imageAfter": "/after1.png",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 2,
+      "imageBefore": "/before1.png",
+      "imageAfter": "/after1.png",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 3,
+      "imageBefore": "/before1.png",
+      "imageAfter": "/after1.png",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 4,
+      "imageBefore": "/before1.png",
+      "imageAfter": "/after1.png",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 5,
+      "imageBefore": "/before1.png",
+      "imageAfter": "/after1.png",
+      "title": "Увеличение губ гиалуроновой кислотой",
     }
   ]

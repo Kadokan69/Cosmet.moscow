@@ -4,16 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import Nav from "../Nav/Nav";
 import { useEffect, useState } from "react";
-import style from './Header.module.scss'
+import style from "./Header.module.scss";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handlerScroll = () => {
       const currentPos = window.scrollY;
-      console.log(currentPos)
+
       if (currentPos > 100 && !scroll) {
         setScroll(true);
       }
@@ -21,7 +21,7 @@ const Header = () => {
         setScroll(false);
       }
     };
-    
+
     handlerScroll();
     document.addEventListener("scroll", handlerScroll);
     return () => {
@@ -92,12 +92,14 @@ const Header = () => {
           <Image src="/logo.svg" alt="Logo" width={150} height={30} />
         </div>
         <div className="flex gap-4 items-center">
-          <Link href="#" className="hidden sm:block">+7 999 999 99 99</Link>
+          <Link href="#" className="hidden sm:block">
+            +7 999 999 99 99
+          </Link>
           <button className=" hidden sm:block rounded-lg bg-white text-[#807170] p-2">Записаться на прием</button>
         </div>
         <div className="items-center flex lg:hidden z-10">
           <button
-            className={`${style.burger_btn } flex lg:hidden ${isOpen? style.active : ''}`}
+            className={`${style.burger_btn} flex lg:hidden ${isOpen ? style.active : ""}`}
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -107,10 +109,9 @@ const Header = () => {
             <span></span>
           </button>
         </div>
-          
       </div>
       <div>
-        <Nav isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );
