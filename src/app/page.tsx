@@ -12,27 +12,27 @@ const Home = () => {
       <section className="flex w-full text-2xl text-white">
         <Banner />
       </section>
-      <section className="p-10">
-        <div className="flex items-center justify-center flex-wrap gap-5 text-[#807170]">
-          <article className="flex items-center flex-col p-5 rounded-lg bg-white gap-1.5 min-w-[180]">
+      <section className="pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-[1200px] m-auto p-4">
+          <article className="flex items-center flex-col p-2 lg:p-5 rounded-lg bg-white gap-1.5 min-w-[150] md:min-w-[180]">
             <Image src="/sand-timer.png" alt="время" width={48} height={48} />
             <h5>Время процедуры</h5>
             <Image src="/eyebrow.svg" alt="my-app/public/eyebrow.svg" width={18} height={4} />
             <p>60 минут</p>
           </article>
-          <article className="flex items-center flex-col p-5 rounded-lg bg-white gap-1.5 min-w-[180]">
+          <article className="flex items-center flex-col p-2 lg:p-5 rounded-lg bg-white gap-1.5 min-w-[150] md:min-w-[180]">
             <Image src="/calendar.png" alt="время" width={48} height={48} />
             <h5>Курс</h5>
             <Image src="/eyebrow.svg" alt="my-app/public/eyebrow.svg" width={18} height={4} />
             <p>Нет</p>
           </article>
-          <article className="flex items-center flex-col p-5 rounded-lg bg-white gap-1.5 min-w-[180]">
+          <article className="flex items-center flex-col p-2 lg:p-5 rounded-lg bg-white gap-1.5 min-w-[150] md:min-w-[180]">
             <Image src="/firsaid.png" alt="время" width={48} height={48} />
             <h5>Реабилитация</h5>
             <Image src="/eyebrow.svg" alt="my-app/public/eyebrow.svg" width={18} height={4} />
             <p>Да</p>
           </article>
-          <article className="flex items-center flex-col p-5 rounded-lg bg-white gap-1.5 min-w-[180]">
+          <article className="flex items-center flex-col p-2 lg:p-5 rounded-lg bg-white gap-1.5 min-w-[150] md:min-w-[180]">
             <Image src="/moviboard.png" alt="время" width={48} height={48} />
             <h5>Видео</h5>
             <Image src="/eyebrow.svg" alt="my-app/public/eyebrow.svg" width={18} height={4} />
@@ -132,7 +132,7 @@ const Home = () => {
           <div className="relative">
             <Image src="/img_3.jpg" alt="" fill className=" object-cover rounded-2xl object-center " />
           </div>
-          <div className="flex flex-col justify-start gap-6 items-start w-full text-[18px] font-accent">
+          <div className="flex flex-col justify-start gap-6 items-start w-full text-[18px]">
             <p>Как проходит увеличение губ гиалуроновой кислотой?</p>
             <p>
               Любая процедура в клинике начинается с подготовки — консультации врача-косметолога, на ней он выяснит,
@@ -166,6 +166,51 @@ const Home = () => {
         <h2 className="text-center">Увеличение губ: фото До и После</h2>
         <p className="text-center">На фото представлены результаты до и после контурной пластики губ.</p>
         <Portfolio data={portfolio} />
+      </section>
+      <section className="pt-10 pb-10" id="welcome">
+        <h2 className="text-center">Добро пожаловать в кабинет врача-косметолога</h2>
+        <div className="grid grid-cols-1 grid-rows-[550px_1fr] sm:grid-rows-[650px_1fr] md:grid-rows-1 md:grid-cols-2 gap-3 max-w-[1200px] m-auto p-4">
+          <div className="relative">
+            <Image src="/doc-1.jpg" alt="" fill className=" object-cover rounded-2xl object-center " />
+          </div>
+          <div className="flex flex-col justify-start gap-6 items-start w-full text-[18px]">
+            <p>
+              Меня зовут Даниелян Гаянэ, я практикующий врач-косметолог с более чем 8-летним опытом работы в медицине.
+            </p>
+            <p>
+              Моя философия основана на глубоком убеждении: косметология — это прежде всего медицина, требующая знаний,
+              ответственности и безупречного соблюдения стандартов. Каждую процедуру я провожу, руководствуясь ключевыми
+              принципами:
+            </p>
+            <p>1. Абсолютная стерильность и безопасность:</p>
+            <p>
+              Ваше здоровье — мой приоритет. Я неукоснительно соблюдаю все нормы асептики и антисептики. Обработка
+              кабинета, инструментария и зон воздействия проводится по строгим медицинским протоколам. Используются
+              только одноразовые расходные материалы и стерилизуемые инструменты. Ваша безопасность гарантирована на
+              каждом этапе.
+            </p>
+            <p>2. Индивидуальный подход:</p>
+            <p>
+              е бывает двух одинаковых лиц. Я тщательно изучаю ваш анамнез, анатомические особенности и учитываю ваши
+              пожелания. На основе этой информации разрабатывается персонализированная программа коррекции, учитывающая
+              все нюансы и исключающая шаблонные решения.
+            </p>
+            <p>3. Только сертифицированные препараты: </p>
+            <p>
+              Я работаю исключительно с препаратами, имеющими необходимые регистрационные удостоверения Минздрава РФ,
+              подтверждающие их безопасность и эффективность. Качество и происхождение используемых средств прозрачны и
+              надежны.
+            </p>
+          </div>
+          <div className="text-[18px] col-span-2">
+            <p>Готовы к преображению?</p>
+            <p>
+              На этом сайте вы можете подробно ознакомиться с полным перечнем моих услуг, узнать больше о методиках
+              инъекционной косметологии и записаться на персональную консультацию.
+            </p>
+            <p>Вместе мы определим оптимальный путь к вашему сияющему и уверенному образу.</p>
+          </div>
+        </div>
       </section>
       <section className="pt-10 pb-10">
         <div className="max-w-[1200px] m-auto p-4 flex flex-col md:flex-row gap-4 ">

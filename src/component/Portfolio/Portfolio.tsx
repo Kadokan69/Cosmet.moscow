@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 type PortfolioProps = {
@@ -16,14 +16,14 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
     setPortfolio(data.slice(0, 2));
   }, [data]);
 
-  const loadMore = () => {
+  const loadMore = useCallback(() => {
     const count = portfolio.length;
     if (count >= data.length) return;
 
     const newItems = data.slice(count, count + 2);
 
     setPortfolio((prev) => [...prev, ...newItems]);
-  };
+  },[portfolio]);
 
   return (
     <>
@@ -40,7 +40,15 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500  hover:opacity-100  opacity-0">
+              <div
+                className="absolute inset-0 flex items-center justify-center transition-opacity duration-500  hover:opacity-100  opacity-0"
+                onTouchStart={(e) => {
+                  e.currentTarget.classList.add("opacity-100");
+                }}
+                onTouchEnd={(e) => {
+                  e.currentTarget.classList.remove("opacity-100");
+                }}
+              >
                 <Image
                   src={item.imageBefore}
                   alt={`After ${item.id}`}
