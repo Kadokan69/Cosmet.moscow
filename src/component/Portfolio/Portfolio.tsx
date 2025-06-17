@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type PortfolioProps = {
   id: number;
@@ -13,10 +14,10 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
 
   useEffect(() => {
     setPortfolio(data.slice(0, 2));
-  }, []);
+  }, [data]);
 
   const loadMore = () => {
-    let count = portfolio.length;
+    const count = portfolio.length;
     if (count >= data.length) return;
 
     const newItems = data.slice(count, count + 2);
@@ -31,10 +32,22 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
           <div key={item.id}>
             <div className="relative overflow-hidden shadow-lg  rounded-4xl w-full group h-[350px]">
               <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 hover:opacity-0 ">
-                <img src={item.imageAfter} alt={`Before ${item.id}`} className="w-full h-full object-cover" />
+                <Image
+                  src={item.imageAfter}
+                  alt={`Before ${item.id}`}
+                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500  hover:opacity-100  opacity-0">
-                <img src={item.imageBefore} alt={`After ${item.id}`} className="w-full h-full object-cover" />
+                <Image
+                  src={item.imageBefore}
+                  alt={`After ${item.id}`}
+                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
             <div className="pt-2 pb-6">
