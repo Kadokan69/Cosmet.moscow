@@ -1,10 +1,13 @@
 import { NavLink } from "@/constant/constant";
 import Link from "next/link";
+import ButtomOpenModal from "../ButtonOpenModal/ButtomOpenModal";
+
 
 interface INav {
   isOpen: boolean;
   setIsOpen: (item: boolean) => void;
 }
+
 
 const Nav = (prop: INav) => {
   return (
@@ -45,7 +48,8 @@ const Nav = (prop: INav) => {
           })}
         </ul>
         <Link href="#" className="lg:hidden">+7 999 999 99 99</Link>
-        <button className="rounded-lg text-white bg-[#807170] p-2 lg:hidden">Записаться на прием</button>
+        <ButtomOpenModal className="rounded-lg text-white bg-[#807170] p-2 lg:hidden">Записаться на прием</ButtomOpenModal>
+
       </nav>
     </>
   );

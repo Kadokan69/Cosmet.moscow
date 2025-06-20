@@ -5,7 +5,7 @@ import style from "./Form.module.scss";
 function Form() {
   const [messengerCheck, setMessengerCheck] = useState(false);
   return (
-    <form id="contactForm" className={`${style.form} bg-white p-5 flex flex-col gap-3 rounded-3xl`}>
+    <form id="contactForm" className={`${style.form} bg-white p-5 flex flex-col gap-3 rounded-3xl text-[#5e452e]`}>
       <p className="text-center text-lg">Оставьте свои данные, мы свяжемся с вами в ближайшее время</p>
       <div>
         <input type="text" name="name" placeholder="Ваше имя" className="bg-[#f6f6f6] p-2.5 w-full" required />

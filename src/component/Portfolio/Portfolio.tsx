@@ -23,7 +23,7 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
     const newItems = data.slice(count, count + 2);
 
     setPortfolio((prev) => [...prev, ...newItems]);
-  },[portfolio]);
+  },[portfolio, data]);
 
   return (
     <>
