@@ -29,34 +29,36 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 max-w-[1200px] m-auto">
         {portfolio.map((item) => (
-          <div key={item.id}>
-            <div className="relative overflow-hidden shadow-lg  rounded-4xl w-full group h-[350px]">
-              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 hover:opacity-0 ">
+          <div key={item.id} className="no-selection">
+            <div 
+              className="relative overflow-hidden shadow-lg rounded-4xl w-full group h-[350px]"
+              onContextMenu={(e) => e.preventDefault()}
+              onTouchStart={(e) => {
+                e.preventDefault();
+                e.currentTarget.querySelector('.hover-image')?.classList.add("opacity-100");
+              }}
+              onTouchEnd={(e) => {
+                e.currentTarget.querySelector('.hover-image')?.classList.remove("opacity-100");
+              }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 hover:opacity-0">
                 <Image
                   src={item.imageAfter}
                   alt={`Before ${item.id}`}
-                  className="w-full h-full object-cover select-none touch-none"
+                  className="w-full h-full object-cover select-none pointer-events-none"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  draggable="false" 
+                  draggable="false"
                 />
               </div>
-              <div
-                className="absolute inset-0 flex items-center justify-center transition-opacity duration-500  hover:opacity-100  opacity-0"
-                onTouchStart={(e) => {
-                  e.currentTarget.classList.add("opacity-100");
-                }}
-                onTouchEnd={(e) => {
-                  e.currentTarget.classList.remove("opacity-100");
-                }}
-              >
+              <div className="hover-image absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0">
                 <Image
                   src={item.imageBefore}
                   alt={`After ${item.id}`}
-                  className="w-full h-full object-cover select-none touch-none"
+                  className="w-full h-full object-cover select-none pointer-events-none"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  draggable="false" 
+                  draggable="false"
                 />
               </div>
             </div>
