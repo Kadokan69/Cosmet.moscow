@@ -87,7 +87,7 @@ const Home = () => {
         </div>
       </section>
       <section className="pt-10 pb-10" id="about-lips">
-        <div className="p-4 pb-0">
+        <div className="p-4 pb-0 max-w-[1200px] m-auto">
           <h2 className="text-center">Увеличение и коррекция губ гиалуроновой кислотой</h2>
           <p className="text-[18px] mt-2">
             Многие из девушек хоть раз задумывалась об увеличении губ. Желание обладать выразительными, гармоничными и
