@@ -5,6 +5,7 @@
   --foreground: #171717;
   --accent-color: #807170;
   --text-color: #5e452e;
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
     --foreground: #ededed;
   }
 } */
+
 button {
   cursor: pointer;
 }

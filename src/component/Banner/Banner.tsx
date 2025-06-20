@@ -9,7 +9,11 @@ function Banner() {
       style={{ backgroundImage: `url('/noroot.png')` }}
     >
       <div className={style.overlay}></div>
-      <h1 className=" relative">Увеличение губ</h1>
+      <div className="relative">
+        <h1 >DOCTOR.DANIELYAN</h1>
+        <p>Врач-косметолог</p>
+      </div>
+
       <ButtomOpenModal className={style.btn}>Записаться на прием</ButtomOpenModal>
     </div>
   );

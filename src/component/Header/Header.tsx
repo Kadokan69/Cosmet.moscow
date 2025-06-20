@@ -39,16 +39,13 @@ const Header = () => {
         !scroll ? "bg-transparent" : "bg-[#b0a9a7]"
       } transition-colors duration-500`}
     >
-      <div className="flex justify-between p-4 items-center">
+      <div className="flex justify-between p-2 items-center">
         <div className=" hidden lg:flex gap-3">
           <Link href="#">
              <Image src="/telegram.svg" alt="" width={30} height={30} />
           </Link>
           <Link href="#">
              <Image src="/vk.svg" alt="" width={30} height={30} />
-          </Link>
-          <Link href="#">
-             <Image src="/telegram.svg" alt="" width={30} height={30} />
           </Link>
         </div>
         <div className="lg:absolute lg:top-0 lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[50%]">

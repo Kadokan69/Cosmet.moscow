@@ -23,7 +23,7 @@ const Nav = (prop: INav) => {
         ""
       )}
       <nav
-        className={`absolute min-w-[320] lg:static lg:h-auto lg:text-white flex top-0 text-[#807170] right-0 flex-col h-[100vh] bg-[#f4f4f2] lg:bg-inherit lg:flex-row items-center gap-4 p-4 pt-4 transition-all duration-200 text-center lg:translate-x-0 ${
+        className={`absolute min-w-[320] lg:static lg:h-auto lg:text-white flex top-0 text-[#807170] right-0 flex-col h-[100vh] bg-[#f4f4f2] lg:bg-inherit lg:flex-row items-center gap-4 p-2 pt-2 transition-all duration-200 text-center lg:translate-x-0 ${
           prop.isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
