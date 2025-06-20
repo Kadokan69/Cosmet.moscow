@@ -35,9 +35,10 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
                 <Image
                   src={item.imageAfter}
                   alt={`Before ${item.id}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover select-none touch-none"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  draggable="false" 
                 />
               </div>
               <div
@@ -52,9 +53,10 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
                 <Image
                   src={item.imageBefore}
                   alt={`After ${item.id}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover select-none touch-none"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  draggable="false" 
                 />
               </div>
             </div>
