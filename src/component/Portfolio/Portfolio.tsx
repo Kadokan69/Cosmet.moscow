@@ -3,9 +3,8 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 type PortfolioProps = {
+  image: string ;
   id: number;
-  imageBefore: string;
-  imageAfter: string;
   title: string;
 };
 
@@ -32,7 +31,7 @@ function Portfolio({ data }: { data: PortfolioProps[] }) {
           <div key={item.id} className="no-selection">
             <div className=" overflow-hidden flex flex-col gap-1  ">
               <Image
-                src={item.imageAfter}
+                src={item.image}
                 alt={`Before ${item.id}`}
                 className="w-full h-[350]  object-cover select-none pointer-events-none rounded-2xl"
                 width={350}

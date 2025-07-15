@@ -44,32 +44,47 @@ export const price = [
   export const portfolio = [
     {
       "id": 1,
-      "imageBefore": "/before1.png",
-      "imageAfter": "/after2.png",
+      "image": "/IMG_6050.jpeg",
       "title": "Увеличение губ гиалуроновой кислотой",
     },
     {
       "id": 2,
-      "imageBefore": "/before1.png",
-      "imageAfter": "/after3.jpg",
+      "image": "/IMG_6051.jpeg",
       "title": "Увеличение губ гиалуроновой кислотой",
     },
     {
       "id": 3,
-      "imageBefore": "/before1.png",
-      "imageAfter": "/after2.png",
+      "image": "/IMG_6052.jpeg",
       "title": "Увеличение губ гиалуроновой кислотой",
     },
     {
       "id": 4,
-      "imageBefore": "/before1.png",
-      "imageAfter": "/after2.png",
+      "image": "/IMG_6053.jpeg",
       "title": "Увеличение губ гиалуроновой кислотой",
     },
     {
       "id": 5,
-      "imageBefore": "/before1.png",
-      "imageAfter": "/after2.png",
+      "image": "/IMG_6054.jpeg",
       "title": "Увеличение губ гиалуроновой кислотой",
-    }
+    },
+    {
+      "id": 6,
+      "image": "/IMG_6055.jpeg",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 7,
+      "image": "/IMG_6056.jpeg",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id":8,
+      "image": "/IMG_6057.jpeg",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
+    {
+      "id": 9,
+      "image": "/IMG_6059.jpeg",
+      "title": "Увеличение губ гиалуроновой кислотой",
+    },
   ]

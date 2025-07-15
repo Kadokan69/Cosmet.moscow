@@ -31,7 +31,9 @@ function Footer() {
       <div className="text-center text-3xl flex-1">
         <a href="tel:+1234567890">+1 (234) 567-890</a>
       </div>
-      <div className="text-center flex-1">
+      <div className="gap-2 flex flex-col flex-1">
+        <p>м. Таганская (кольцевая Выход 1).</p>
+        <p>Большой дровяной пер., д.8, с.1 (вход в здание со стороны дома 10)</p>
         <p>Время работы: Пн-Пт 9:00-18:00</p>
       </div>
     </footer>
