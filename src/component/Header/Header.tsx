@@ -49,7 +49,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="lg:absolute lg:top-0 lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[50%]">
-          <Image src="/logo.png" alt="Logo" width={150} height={30} />
+          <Image src="/logo-new.png" alt="Logo" width={150} height={30} />
         </div>
         <div className="flex gap-4 items-center">
           <Link href="#" className="hidden sm:block">
