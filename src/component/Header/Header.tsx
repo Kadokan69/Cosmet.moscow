@@ -52,8 +52,8 @@ const Header = () => {
           <Image src="/logo-new.png" alt="Logo" width={150} height={30} />
         </div>
         <div className="flex gap-4 items-center">
-          <Link href="#" className="hidden sm:block">
-            +7 999 999 99 99
+          <Link href="tel:+79173169209" className="hidden sm:block">
+            +7 (917) 316-92-09
           </Link>
           <ButtomOpenModal className=" hidden sm:block rounded-lg bg-white text-[#807170] p-2">
             Записаться на прием
@@ -78,7 +78,7 @@ const Header = () => {
         <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <Modal isOpen={isOpenModal} onClose={close}>
-        <Form />
+        <Form id="modal-form"/>
       </Modal>
     </header>
   );

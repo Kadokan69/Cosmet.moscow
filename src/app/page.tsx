@@ -207,7 +207,7 @@ const Home = () => {
             <p>Консультация бесплатная. Скидка 10% на первое посещение.</p>
           </div>
           <div className="w-full md:w-1/2 p-3 md:p-0 ">
-            <Form />
+            <Form id="page-form"/>
           </div>
         </div>
       </section>
