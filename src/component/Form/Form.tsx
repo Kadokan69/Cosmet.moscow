@@ -9,7 +9,7 @@ interface IFormProps {
 
 function Form(props: IFormProps) {
   const [messengerCheck, setMessengerCheck] = useState(false);
-  const [selectedMessenger, setSelectedMessenger] = useState<string>("");
+  const [selectedMessenger, setSelectedMessenger] = useState<string>("call");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -29,7 +29,7 @@ function Form(props: IFormProps) {
   const handleContactMethodChange = (isMessenger: boolean) => {
     setMessengerCheck(isMessenger);
     if (!isMessenger) {
-      setSelectedMessenger("");
+      setSelectedMessenger("call");
     }
   };
 
@@ -42,12 +42,12 @@ function Form(props: IFormProps) {
 
     const submissionData = {
       ...formData,
-      contactMethod: messengerCheck ? "messenger" : "call",
-      messenger: messengerCheck ? selectedMessenger : null,
+      method: selectedMessenger,
     };
+    console.log(submissionData)
 
     try {
-      const response = await fetch("api/send", {
+      const response = await fetch("api/telegram", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
