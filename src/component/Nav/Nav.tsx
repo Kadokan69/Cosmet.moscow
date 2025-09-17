@@ -47,7 +47,7 @@ const Nav = (prop: INav) => {
             );
           })}
         </ul>
-        <Link href="#" className="lg:hidden">+7 999 999 99 99</Link>
+        <Link href="tel:+79173169209" className="lg:hidden"> +7 (917) 316-92-09</Link>
         <ButtomOpenModal className="rounded-lg text-white bg-[#807170] p-2 lg:hidden">Записаться на прием</ButtomOpenModal>
 
       </nav>
